@@ -12,6 +12,11 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      choice_parameter:
+        description: "Example choice parameter"
+        required: true
+        options: ["option1", "option2", "option3"]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
