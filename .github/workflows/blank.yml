@@ -13,10 +13,15 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      choice_parameter:
-        description: "Example choice parameter"
+      logLevel:
+        description: 'Log level'
         required: true
-        options: ["option1", "option2", "option3"]
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
