@@ -12,7 +12,11 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    #inputs:
+    inputs:
+      backend_branch:
+        description: 'Backend branch to deploy'
+        required: true
+        default: 'main'
       #logLevel:
         #description: 'Log level'
         #required: true
