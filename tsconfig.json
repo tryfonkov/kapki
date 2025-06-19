@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "esnext",
+    "target": "es2022",
+    "lib": ["dom", "es2022"],
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": ".",
+    "outDir": "dist"
+  },
+  "include": [],
+  "references": [
+    { "path": "apps/frontend" },
+    { "path": "apps/backend" }
+  ]
+}
