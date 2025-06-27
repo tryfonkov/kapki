@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "pnpm --filter './{apps,packages}/*' build",
+    "dev:frontend": "pnpm --filter frontend dev",
     "lint": "pnpm --filter './{apps,packages}/*' lint",
     "lint:fix": "pnpm --filter './{apps,packages}/*' lint:fix",
     "format": "prettier --write \"{apps,packages}/**/*.{ts,tsx,js,jsx,json,css,scss,md}\"",
