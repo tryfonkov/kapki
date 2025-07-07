@@ -1,7 +1,8 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Environment} from "@react-three/drei";
+import { ModelLoader } from "./ModelLoader";
 
 export default function CanvasScene() {
   return (
@@ -18,11 +19,7 @@ export default function CanvasScene() {
         <directionalLight position={[5, 5, 5]} intensity={0.8} />
         <hemisphereLight color={"white"} groundColor={"#444"} intensity={0.5} />
 
-        {/* Test cube */}
-        <mesh castShadow receiveShadow>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="orange" />
-        </mesh>
+         <ModelLoader url="/models/DamagedHelmet.glb" scale={1} />
 
         {/* Camera controls */}
         <OrbitControls
@@ -31,6 +28,8 @@ export default function CanvasScene() {
           enableRotate
           enableDamping={false}
         />
+
+        <Environment preset="sunset" />
       </Canvas>
     </div>
   );
