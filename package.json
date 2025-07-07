@@ -32,8 +32,8 @@
     "typescript": "^5.8.3"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --fix",
+    "*.{js,jsx,ts,tsx}": [
+      "pnpm --filter ./apps/frontend next lint --fix --",
       "prettier --write"
     ]
   },
