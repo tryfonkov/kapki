@@ -1,6 +1,6 @@
-import React, { Suspense } from "react";
-import { useGLTF } from "@react-three/drei";
-import { Group } from "three";
+import React, { Suspense } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { Group, Mesh } from 'three';
 
 type Props = {
   url: string;
@@ -11,7 +11,7 @@ export function ModelLoader({ url, scale = 1 }: Props) {
   const { scene } = useGLTF(url) as { scene: Group };
 
   scene.traverse((child) => {
-    if ((child as any).isMesh) {
+    if (child instanceof Mesh) {
       child.castShadow = true;
       child.receiveShadow = true;
     }
@@ -24,4 +24,4 @@ export function ModelLoader({ url, scale = 1 }: Props) {
   );
 }
 
-useGLTF.preload("/models/DamagedHelmet.glb");
+useGLTF.preload('/models/DamagedHelmet.glb');
