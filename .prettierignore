@@ -1,0 +1,10 @@
+# build
+.next
+dist
+build
+
+# deps
+node_modules
+
+# pnpm store (если вдруг)
+.pnpm
